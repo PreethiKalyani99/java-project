@@ -4,7 +4,7 @@ package org.example;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        EvenOdd eo = new EvenOdd();
-        System.out.println("The number is " + eo.checkEvenOrOdd(-8));
+        LargestOfTwo eo = new LargestOfTwo();
+        System.out.println(eo.findLargestNumber(-5,0));
     }
 }
