@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.loops.Factorial;
 import org.example.loops.MultiplicationTable;
 import org.example.loops.SumOfNumbers;
 
@@ -7,7 +8,7 @@ import org.example.loops.SumOfNumbers;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        MultiplicationTable m = new MultiplicationTable();
-        System.out.println(m.generateTable(5));
+        Factorial f = new Factorial();
+        System.out.println(f.getFactorialOfANumber(0));
     }
 }
