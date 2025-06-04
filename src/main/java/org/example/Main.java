@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.array.SumOfArray;
 import org.example.loops.Factorial;
 import org.example.loops.MultiplicationTable;
 import org.example.loops.ReverseANumber;
@@ -9,7 +10,7 @@ import org.example.loops.SumOfNumbers;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        ReverseANumber f = new ReverseANumber();
-        System.out.println(f.reverseANumber(1));
+        SumOfArray s = new SumOfArray();
+        System.out.println(s.sumOfArray(new int[] {1, 2, 3, 5}));
     }
 }
