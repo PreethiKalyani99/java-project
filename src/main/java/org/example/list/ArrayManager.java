@@ -15,6 +15,11 @@ public class ArrayManager {
         list.add(el);
     }
 
+    public void update (int index, int val) {
+        if(index < 0 || index > list.size()) throw new IndexOutOfBoundsException("Index does not exist");
+
+        list.set(index, val);
+    }
     public void remove (int el) {
         if (list.isEmpty()) throw new IllegalStateException("List is empty");
 

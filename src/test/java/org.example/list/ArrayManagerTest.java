@@ -43,6 +43,16 @@ class ArrayManagerTest {
     }
 
     @Test
+    void shouldUpdateArrayElement () {
+        am.add(2);
+        am.add(5);
+        am.add(3);
+
+        am.update(1, 7);
+        assertEquals(Arrays.asList(2,7,3), am.getArray());
+    }
+
+    @Test
     void shouldReturnFalseIfArrayDoesNotContainGivenInput () {
         am.add(2);
         am.add(5);
