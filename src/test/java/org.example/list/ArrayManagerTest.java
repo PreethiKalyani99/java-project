@@ -1,4 +1,4 @@
-package org.example.array;
+package org.example.list;
 
 import org.junit.jupiter.api.Test;
 
@@ -17,8 +17,8 @@ class ArrayManagerTest {
         am.add(5);
         am.add(3);
         am.add(4);
-        int[] expectedResult = {7,1,2,5,3,4};
-        assertArrayEquals(expectedResult, am.getArray());
+
+        assertEquals(Arrays.asList(7,1,2,5,3,4), am.getArray());
     }
 
     @Test
@@ -30,8 +30,8 @@ class ArrayManagerTest {
         am.add(3);
         am.add(4);
         am.remove(3);
-        int[] expectedResult = {7,1,2,5,4};
-        assertArrayEquals(expectedResult, am.getArray());
+
+        assertEquals(Arrays.asList(7,1,2,5,4), am.getArray());
     }
 
     @Test
@@ -57,9 +57,10 @@ class ArrayManagerTest {
         am.add(2);
         am.add(5);
         am.add(4);
-        int[] expectedResult = {1,2,4,5,7};
+
         am.sort();
-        assertArrayEquals(expectedResult, am.getArray());
+
+        assertEquals(Arrays.asList(1,2,4,5,7), am.getArray());
     }
 
     @Test
@@ -67,6 +68,7 @@ class ArrayManagerTest {
         am.add(7);
         am.add(9);
         am.add(2);
+
         assertEquals(1, am.search(9));
     }
 
@@ -75,6 +77,7 @@ class ArrayManagerTest {
         am.add(7);
         am.add(9);
         am.add(2);
+
         assertEquals(9, am.getMax());
     }
 
@@ -83,12 +86,24 @@ class ArrayManagerTest {
         am.add(7);
         am.add(9);
         am.add(2);
+
         assertEquals(2, am.getMin());
     }
 
     @Test
     void shouldClearArray () {
         am.clear();
+
         assertEquals(0, am.size());
     }
+
+    @Test
+    void shouldThrowErrorIfRemoveElementInEmptyArray () {
+       Exception exception = assertThrows(IllegalStateException.class, () -> {
+           am.remove(4);
+       });
+
+        assertEquals("List is empty", exception.getMessage());
+    }
 }
+

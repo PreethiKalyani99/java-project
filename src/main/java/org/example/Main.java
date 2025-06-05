@@ -1,7 +1,7 @@
 package org.example;
 
-import org.example.array.ArrayManager;
 import org.example.array.SumOfArray;
+import org.example.list.ArrayManager;
 import org.example.list.RemoveDuplicates;
 import org.example.loops.Factorial;
 import org.example.loops.MultiplicationTable;
@@ -23,6 +23,6 @@ public class Main {
 
         a.remove(4);
 
-        System.out.println(Arrays.toString(a.getArray()));
+        System.out.println(a.getArray());
     }
 }
