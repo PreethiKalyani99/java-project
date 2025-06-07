@@ -1,22 +1,23 @@
 package org.example;
 
 import org.example.linkedList.DoublyLinkedList;
+import org.example.list.LinkedListManager;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        DoublyLinkedList ll = new DoublyLinkedList();
+        LinkedListManager ll = new LinkedListManager();
         ll.add(1);
         ll.add(4);
-        ll.add(5);
+        ll.addFirst(5);
         ll.add(2);
-        ll.add(1);
+        ll.addFirst(1);
 
-        ll.remove(5);
-        System.out.println(ll.getList());
+        ll.addAtPosition(4, 50);
 
-        ll.reverse();
+        ll.remove(3);
         System.out.println(ll.getList());
+        System.out.println(ll.get(2));
     }
 }
