@@ -16,6 +16,8 @@ public class VectorManager {
     }
 
     public void update (int index, int val) {
+        if(index < 0 || index > vector.size()) throw new IndexOutOfBoundsException("Invalid index: " + index);
+
         vector.set(index, val);
     }
 
@@ -24,6 +26,8 @@ public class VectorManager {
     }
 
     public void removeAtIndex (int index) {
+        if(index < 0 || index > vector.size()) throw new IndexOutOfBoundsException("Invalid index: " + index);
+
         vector.remove(index);
     }
 
@@ -53,6 +57,22 @@ public class VectorManager {
 
     public void clear () {
         vector.clear();
+    }
+
+    public int getFirstElement () {
+        return vector.firstElement();
+    }
+
+    public int getLastElement () {
+        return vector.lastElement();
+    }
+
+    public Integer[] toArray () {
+        return vector.toArray(new Integer[0]);
+    }
+
+    public void trimToSize() {
+        vector.trimToSize();
     }
 
     public Vector<Integer> getVector () {
