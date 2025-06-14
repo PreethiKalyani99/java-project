@@ -1,6 +1,6 @@
 package org.example.inheritance;
 
-public class Vehicle {
+public abstract class Vehicle {
     private int speed;
 
     public void setSpeed (int speed) {
@@ -10,4 +10,7 @@ public class Vehicle {
     public int getSpeed () {
         return speed;
     }
+
+    public abstract void increaseSpeed();
+    public abstract void decreaseSpeed();
 }
