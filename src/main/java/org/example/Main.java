@@ -1,12 +1,8 @@
 package org.example;
 
-import org.example.inheritance.Bike;
-import org.example.inheritance.Car;
-import org.example.inheritance.ElectricCar;
-import org.example.linkedList.DoublyLinkedList;
-import org.example.list.LinkedListManager;
-import org.example.list.VectorManager;
-import org.example.properties.PropertiesTryOut;
+import org.example.oops_concepts.Bike;
+import org.example.oops_concepts.Car;
+import org.example.oops_concepts.ElectricCar;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.

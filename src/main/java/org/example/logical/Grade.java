@@ -1,4 +1,4 @@
-package org.example;
+package org.example.logical;
 
 public class Grade {
     String getGrade(int mark) {

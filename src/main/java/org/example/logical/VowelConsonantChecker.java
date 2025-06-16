@@ -1,4 +1,4 @@
-package org.example;
+package org.example.logical;
 
 public class VowelConsonantChecker {
     private static final String VOWELS = "aeiou";

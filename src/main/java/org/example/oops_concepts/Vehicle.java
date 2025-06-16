@@ -1,4 +1,4 @@
-package org.example.inheritance;
+package org.example.oops_concepts;
 
 public abstract class Vehicle {
     private int speed;

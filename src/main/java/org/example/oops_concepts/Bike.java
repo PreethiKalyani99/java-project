@@ -1,4 +1,4 @@
-package org.example.inheritance;
+package org.example.oops_concepts;
 
 public class Bike extends Vehicle{
     public void increaseSpeed () {

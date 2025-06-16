@@ -1,4 +1,4 @@
-package org.example;
+package org.example.logical;
 
 public class LargestOfTwo {
     public String findLargestNumber (int num1, int num2) {

@@ -1,4 +1,4 @@
-package org.example.inheritance;
+package org.example.oops_concepts;
 
 public class ElectricCar extends Vehicle{
     private int batteryLevel = 100;

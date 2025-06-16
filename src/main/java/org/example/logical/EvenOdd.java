@@ -1,4 +1,4 @@
-package org.example;
+package org.example.logical;
 
 public class EvenOdd {
     public String checkEvenOrOdd (int number) {
