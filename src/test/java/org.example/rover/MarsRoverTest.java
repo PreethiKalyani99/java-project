@@ -1,10 +1,11 @@
-package org.example.marsrover;
+package org.example.rover;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MarsRoverTest {
     MarsRover marsRover = new MarsRover(5, 5);
@@ -14,7 +15,7 @@ public class MarsRoverTest {
 
         @BeforeEach
         void setUp () {
-            marsRover.setPosition(1,2, 'N');
+            marsRover.setPosition(1,2, Direction.N);
         }
 
         @Test
@@ -43,13 +44,13 @@ public class MarsRoverTest {
 
         @Test
         void shouldReachExpectedPositionAfterValidCommandSequence () {
-            marsRover.setPosition(1,2, 'N');
+            marsRover.setPosition(1,2, Direction.N);
             assertEquals("1 3 N", marsRover.processCommands("LMLMLMLMM"));
         }
 
         @Test
         void shouldIgnoreInvalidCommandsInTheSequence () {
-            marsRover.setPosition(3,3, 'E');
+            marsRover.setPosition(3,3, Direction.E);
             assertEquals("5 1 S", marsRover.processCommands("MMWRMasMRoMRRMR"));
         }
     }
@@ -59,7 +60,7 @@ public class MarsRoverTest {
 
         @BeforeEach
         void setUp () {
-            marsRover.setPosition(3,3,'E');
+            marsRover.setPosition(3,3,Direction.E);
         }
 
         @Test
